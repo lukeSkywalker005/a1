@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>アンケート</title>
+<style type="text/css">
+		<!--
+		div{margin-top:10px;}
+		-->
+	</style>
+	<script type="text/javascript">
+		<!--
+		function check(){
+			if(document.frm1.name.value == ""){
+				window.alert("名前の項目が未入力です。");
+				return false;
+			}
+			return true;
+		}
+	//-->
+	</script>
+</head>
+<body>
+	<form id="frm1" name="frm1" action="./ex17b.html" method="get" onsubmit="return check();">
+		<div>
+			名前
+			<input type="text" name="name"/>
+		</div>
+		<div>
+			性別
+			<input type="radio" name="sex" value="男"/>男性
+			<input type="radio" name="sex" value="女"/>女性
+		</div>
+		<div>
+			居住地
+			<select name="address">
+				<option value="1">北海道・東北</option>
+				<option value="2">関東・甲信越</option>
+				<option value="3">中部・北陸</option>
+				<option value="4">近畿</option>
+				<option value="5">中国・四国</option>
+				<option value="6">九州・沖縄</option>
+			</select>
+		</div>
+		<div>
+			好きな音楽分野
+			<input type="checkbox" name="music" value="1"/>邦楽
+			<input type="checkbox" name="music" value="2"/>洋楽
+			<input type="checkbox" name="music" value="3"/>クラシック
+		</div>
+		<div>
+		コメント
+			<textarea name="comment" cols="30" rows="5"></textarea>
+		</div>
+		<div>
+			<input type="submit" value="送信"/>
+			<input type="reset" value="取消"/>
+		</div>
+	</form>
+</body>
+</html>
